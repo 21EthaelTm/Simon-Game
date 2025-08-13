@@ -1,0 +1,39 @@
+body{
+    background-color: #011F3F;
+    text-align: center;
+    padding: 0px;
+    margin: 5px;
+}
+.heading{
+    margin: 2% ;
+    font-family: 'Press Start 2P', cursive;
+    color: #FEF2BF;
+    font-size: 3em;
+}
+.container{
+    display:grid;
+    gap: 50px;
+    width: 450px;
+    height: 450px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin:4% auto;
+}
+.container div{
+    height: 100%;
+    width: 100%;
+    border: 10px solid black;
+    border-radius: 20%;
+}
+.container-green {
+ background-color:green;
+}
+.container-red{
+    background-color:red;
+}
+.container-yellow{
+    background-color:yellow;
+}
+.container-blue{
+    background-color:blue;
+}
