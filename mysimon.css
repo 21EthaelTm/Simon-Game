@@ -1,39 +1,67 @@
-body{
-    background-color: #011F3F;
-    text-align: center;
-    padding: 0px;
-    margin: 5px;
+body {
+  background-color: #011f3f;
+  text-align: center;
+  padding: 1px;
+  min-height: 100vh;
+  margin: 0;
 }
-.heading{
-    margin: 2% ;
-    font-family: 'Press Start 2P', cursive;
-    color: #FEF2BF;
-    font-size: 3em;
+.heading {
+  margin: 5%;
+  font-family: "Press Start 2P", cursive;
+  color: #fef2bf;
+  font-size: 2em;
 }
-.container{
-    display:grid;
-    gap: 50px;
-    width: 450px;
-    height: 450px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin:4% auto;
+.container {
+  display: grid;
+  gap: 50px;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: auto;
 }
-.container div{
-    height: 100%;
-    width: 100%;
-    border: 10px solid black;
-    border-radius: 20%;
+.container div {
+  height: 100%;
+  width: 100%;
+  border: 10px solid black;
+  border-radius: 20%;
+  box-sizing: border-box;
 }
 .container-green {
- background-color:green;
+  background-color: green;
 }
-.container-red{
-    background-color:red;
+.container-red {
+  background-color: red;
 }
-.container-yellow{
-    background-color:yellow;
+.container-yellow {
+  background-color: yellow;
 }
-.container-blue{
-    background-color:blue;
+.container-blue {
+  background-color: blue;
+}
+/* ############ media Query################ */
+@media (max-width: 890px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: auto;
+    align-items:flex-end;
+    margin: auto;
+    flex-wrap: wrap; 
+  }
+  .container div {
+    min-height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .container-green{
+    align-self: flex-start;
+  }
+  .container-yellow{
+    margin-bottom: auto;
+    align-self: flex-start;
+  }
+
 }
