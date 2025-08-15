@@ -18,6 +18,7 @@ for (let i = 0; i < arrybox.length; i++) {
     let elementclicked = +$(this).text();
       playermemo.push(arrybox[elementclicked]);
     audiobox(elementclicked);
+    animation(elementclicked);
   });
 }
 
