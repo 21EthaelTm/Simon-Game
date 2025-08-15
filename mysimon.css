@@ -29,15 +29,19 @@ body {
 }
 .green {
   background-color: green;
+  color: green;
 }
 .red {
   background-color: red;
+  color: red;
 }
 .yellow {
   background-color: yellow;
+  color:yellow
 }
 .blue {
   background-color: blue;
+  color: blue;
 }
 /* ############ media Query################ */
 @media (max-width: 890px) {
