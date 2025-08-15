@@ -23,7 +23,7 @@ function audiobox(index) {
 
       break;
     case 1:
-      new Audio("sounds/blue.mp3").play();
+      new Audio("sounds/yellow.mp3").play();
 
       break;
     case 2:
@@ -32,7 +32,7 @@ function audiobox(index) {
       break;
 
     case 3:
-      new Audio("sounds/blue.mp3").play();
+      new Audio("sounds/red.mp3").play();
       break;
 
     default:
