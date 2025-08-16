@@ -9,7 +9,17 @@ for (let i = 0; i < arryClass.length; i++) {
       let eleClass = $(this).attr("class").split(" ")[0];
       audioBox(arryClass.indexOf(eleClass));
       recoldBox.push(eleClass);
-      randGenerator();
+       console.log(recoldBox)
+      if (JSON.stringify(displayedBox) === JSON.stringify(recoldBox)) {
+        recoldBox = [];
+        randGenerator();
+        $(".heading").text("Level " + ++counter);
+      } else {
+        counter = 0;
+        $(".heading").text("Game over, Press Any Key to Restart");
+        animation($("body"));
+        new Audio("sounds/wrong.mp3").play();
+      }
     }
   });
 }
@@ -43,16 +53,4 @@ function animation(element) {
   setTimeout(function () {
     element.removeClass("spark");
   }, 300);
-}
-function checker() {
-  if (JSON.stringify(displayedBox) === JSON.stringify(recoldBox)) {
-        recoldBox = [];
-        randGenerator();
-        $(".heading").text("Level " + ++counter);
-      } else {
-        counter = 0;
-        $(".heading").text("Game over, Press Any Key to Restart");
-        animation($("body"));
-        new Audio("sounds/wrong.mp3").play();
-      }
 }
