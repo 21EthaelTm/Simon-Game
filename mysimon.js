@@ -9,7 +9,8 @@ for (let i = 0; i < arryClass.length; i++) {
       let eleClass = $(this).attr("class").split(" ")[0];
       audioBox(arryClass.indexOf(eleClass));
       recoldBox.push(eleClass);
-      randGenerator();
+      checker();
+      // randGenerator();
     }
   });
 }
@@ -30,7 +31,7 @@ function randGenerator() {
     animation($("." + arryClass[randpicker]));
     audioBox(randpicker);
     displayedBox.push(arryClass[randpicker]);
-  }, 1000);
+  }, 3000);
 }
 
 function audioBox(index) {
@@ -46,11 +47,13 @@ function animation(element) {
 }
 function checker() {
   if (JSON.stringify(displayedBox) === JSON.stringify(recoldBox)) {
-        recoldBox = [];
-        randGenerator();
         $(".heading").text("Level " + ++counter);
+        randGenerator();
+
       } else {
         counter = 0;
+        displayedBox =[];
+        recoldBox = []; 
         $(".heading").text("Game over, Press Any Key to Restart");
         animation($("body"));
         new Audio("sounds/wrong.mp3").play();
